@@ -116,14 +116,6 @@ export default function LandingPage() {
                             src={heroTeam}
                             alt="Team collaborating in a modern office"
                         />
-                        <div className="hero-card hero-card-1">
-                            <div className="hero-card-label">Interviews Analyzed</div>
-                            <div className="hero-card-val"><span>2.5M</span>+</div>
-                        </div>
-                        <div className="hero-card hero-card-2">
-                            <div className="hero-card-label">Time Saved</div>
-                            <div className="hero-card-val"><span>85</span>%</div>
-                        </div>
                     </div>
                 </div>
             </section>
