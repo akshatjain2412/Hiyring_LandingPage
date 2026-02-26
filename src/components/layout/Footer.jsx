@@ -1,10 +1,12 @@
-const navigate = (path) => { window.location.href = path; };
+import { useNavigate } from "react-router-dom";
 
 /**
  * Footer — dark footer with brand info, navigation columns, and newsletter signup.
  * Import and place at the bottom of any page layout.
  */
 export default function Footer() {
+    const navigate = useNavigate();
+
     return (
         <footer className="footer">
             <div className="footer-top">

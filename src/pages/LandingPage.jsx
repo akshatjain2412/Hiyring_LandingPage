@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import heroTeam from "../assets/hero-team.png";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -8,8 +9,6 @@ import {
     TeamIcon, CustomIcon, SecurityIcon, StarIcon, CheckIcon, ArrowRight,
     InviteIcon, AIIcon, RankIcon, HireIcon,
 } from "../components/icons/Icons";
-
-const navigate = (path) => { window.location.href = path; };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const faqs = [
@@ -49,6 +48,7 @@ const features9 = [
 
 // ─── LandingPage ──────────────────────────────────────────────────────────────
 export default function LandingPage() {
+    const navigate = useNavigate();
     const revealRefs = useRef([]);
 
     // Scroll-reveal observer

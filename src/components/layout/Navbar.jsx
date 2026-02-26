@@ -1,7 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { MenuIcon, CloseIcon } from "../icons/Icons";
-
-const navigate = (path) => { window.location.href = path; };
 
 /**
  * Navbar — fixed top bar with logo, nav links, CTAs and a responsive hamburger.
@@ -9,6 +8,7 @@ const navigate = (path) => { window.location.href = path; };
  */
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const goTo = (path) => {
         setMenuOpen(false);
@@ -44,7 +44,7 @@ export default function Navbar() {
 
                 <div className="nav-ctas">
                     <button className="btn-ghost" onClick={() => goTo("/login")}>Log In</button>
-                    <button className="btn-primary" onClick={() => goTo("/signup")}>Get Started</button>
+                    <button className="btn-primary" onClick={() => goTo("/signup")}>Sign up</button>
                 </div>
 
                 <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
